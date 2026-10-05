@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Bean and Brew</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Σύνδεση με το CSS -->
+    <link rel="stylesheet" href="Bean and Brew.css">
+</head>
+<body>
+    
+    <!-- Κεντρικό Μενού -->
+    <nav id="nav1">
+        <li><a href="Bean and Brew.html">HOME</a></li>
+        <li><a href="coffees.html">COFFEES</a></li>
+        <li><a href="ourbeans.html">OUR BEANS</a></li>
+        <li><a href="info.html">ABOUT US</a></li>
+        <li>
+            <a href="cart.html" class="cart-link">
+                <img src="images/cart.jpg" alt="Cart" class="cart-icon">
+            </a>
+        </li>
+    </nav>
+
+    <!-- Ενότητα: Καλάθι -->
+    <section class="content-section">
+        <h2>Your Shopping Cart</h2>
+        
+        <!-- Εδώ θα μπαίνουν τα προϊόντα μέσω JavaScript -->
+        <div id="cart-items-container">
+            
+            <!-- ΔΕΙΓΜΑ ΠΡΟΪΟΝΤΟΣ (Θα το παράγεις με JS μετά) -->
+            <div class="cart-item">
+                <input type="number">
+            </div>
+            <!-- ΤΕΛΟΣ ΔΕΙΓΜΑΤΟΣ -->
+
+        </div>
+
+        <hr class="cart-divider">
+
+        <!-- Σύνολο και Κουμπί Αγοράς -->
+        <div class="cart-summary">
+            <h3>Total: <span id="cart-total">$3.50</span></h3>
+        </div>
+        <div class="cart-actions">
+            <button class="btn" id="checkout-btn">Proceed to Checkout</button>
+            <button class="btn" id="clear-cart-btn">Clear Cart</button>
+        </div>
+        <!-- Μήνυμα για άδειο καλάθι (Κρυφό στην αρχή) -->
+        <p id="empty-cart-msg" style="text-align: center; color: white; display: none;">Your cart is currently empty.</p>
+    </section>
+    <section class="Suggestions">
+        <h2 style="color: black; margin-top: 30px;">You Might Also Like</h2>
+        <div class="products-container">
+            <!--PROION ENA-->
+            <div>
+                <img src="images/freddo-espresso.jpg" alt="Freddo Espresso" class="product-image" id="freddo">
+                <h3>Freddo Espresso</h3>
+                <p>Cold, refreshing coffee</p>
+                <span class="price">$3.50</span>
+                <button class="add-to-cart" data-product="Freddo Espresso" data-price="3.50">Quick Add to Cart</button>
+            </div>
+            <!--PROION DYO-->
+            <div>
+                <img src="images/iced-latte.webp" alt="Iced Latte" class="product-image" id="iced-latte">
+                <h3>Iced Latte</h3>
+                <p>Cold,milky coffee</p>
+                <span class="price">$3.50</span>
+                <button class="add-to-cart" data-product="Iced Latte" data-price="3.50">Quick Add to Cart</button>
+            </div>
+            <!--PROION TRIA-->
+            <div>
+                <img src="images/cappucino.webp" alt="Cappuccino" class="product-image" id="cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Hot,cozy,creamy coffee</p>
+                <span class="price">$3.50</span>
+                <button class="add-to-cart" data-product="Cappuccino" data-price="3.50">Quick Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <!-- Σύνδεση με το αρχείο JS (Το βάζουμε πάντα στο τέλος του body) -->
+        <script src="JavaScript/script.js"></script>
+        <script src="JavaScript/cart.js"></script>
+</body>
+</html>

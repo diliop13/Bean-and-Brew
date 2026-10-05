@@ -1,0 +1,239 @@
+body{
+    background-color: rgb(250, 240, 210);
+}
+nav{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    background-color: #3b2818;
+    list-style: none;
+    width: 60%; /* Πρέπει να είναι ίδιο με το width του nav για να στοιχίζονται */
+    margin: 0 auto;
+
+}
+.hero-section {
+    width: 60%; /* Πρέπει να είναι ίδιο με το width του nav για να στοιχίζονται */
+    margin: 0 auto;
+    margin-top: 0.59px;
+    height: 40vh; /* Πιάνει το 70% του ύψους της οθόνης */
+    
+    /* Εδώ βάζουμε τη φωτογραφία ΚΑΙ ένα μαύρο ημιδιάφανο φίλτρο από πάνω της */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/menu-back2.jpg');
+    background-size: cover; /* Κάνει τη φωτογραφία να χωράει μέσα στο div χωρίς να κόβεται */
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Κεντράρουμε τον τίτλο πάνω στη φωτογραφία */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .hero-text {
+        text-align: center;
+        color: #fff;
+        font-family: 'Cormorant Garamond', serif;
+        margin-top: 0px;
+
+    }
+}
+.content-section {
+    width: 60%; /* Πρέπει να είναι ίδιο με το width του nav για να στοιχίζονται */
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #80634c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cart-link{
+    margin-left: auto; /* Σπρώχνει το εικονίδιο του καλαθιού δεξιά */
+}
+.cart-icon {
+    width: 28px; /* Μικρότερο μέγεθος για το εικονίδιο του καλαθιού */
+    height: auto;
+    vertical-align: middle; /* Κεντράρει το εικονίδιο με το κείμενο */
+    filter: invert(100%); /* Κάνει το εικονίδιο λευκό για να φαίνεται στο σκούρο φόντο */
+    mix-blend-mode: screen; /* Εξασφαλίζει ότι το εικονίδιο θα φαίνεται καλά σε διαφορετικά φόντα */
+}
+/* Βάζει τις εικόνες δίπλα-δίπλα και δημιουργεί απόσταση (gap) */
+.products-container {
+    display: flex;
+    justify-content: center; /* Τις φέρνει στο κέντρο */
+    gap: 60px;               /* Η απόσταση μεταξύ των καφέδων - άλλαξέ το αν θες πιο πολύ χώρο */
+    margin-top: 30px;        /* Κενό από τον τίτλο */
+}
+#nav1 a{
+    color: rgb(244, 239, 239);
+    text-decoration:none;
+    font-size: 12px;
+}
+.product-image {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+h2{
+        font-family: 'Cormorant Garamond', serif;
+        text-align: center;
+        margin-top: 0;
+        color: #ffffff;
+    }
+
+.btn {
+    background-color: #3b2818; /* Το σκούρο καφέ του μενού πλοήγησης */
+    color: #f7f3ee;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif; /* Ταιριάζει με τους τίτλους */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; /* Εδώ μπαίνει το pointer! */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Ομαλό εφέ */
+    margin-top: 15px; /* Απόσταση από το κείμενο από πάνω του */
+}
+
+/* Στυλ για το καλάθι */
+.cart-actions {
+    display: flex;
+    align-items: flex-end;       /* Τα κεντράρει απόλυτα στον κάθετο άξονα! */
+    gap: 10px;                 /* Δημιουργεί ένα σταθερό κενό ανάμεσά τους */
+    margin-top: 15px;
+}
+    #clear-cart-btn{
+        padding: 5px 20px; /* Φυσιολογικό συμμετρικό padding */    /* Εξασφαλίζει ότι το κουμπί θα πάει τέρμα αριστερά */
+        font-size: 16px;
+        color: #f7f3ee; /* Το ανοιχτό χρώμα του κειμένου σου */
+        border-radius: 8px;
+        cursor: pointer;
+        font-family: 'Cormorant Garamond', serif;
+        transition: background-color 0.3s;
+    }
+#checkout-btn{
+    border: 1px solid #f7f3ee; /* Ένα διακριτικό περίγραμμα αντί για γεμάτο φόντο */
+}
+/* Εφέ όταν περνάει το ποντίκι από πάνω */
+.btn:hover {
+    background-color: #80634c; /* Ανοίγει το χρώμα στο καφέ της κάρτας */
+    transform: scale(1.05);    /* Μεγαλώνει ελάχιστα */
+}
+.add-to-cart {
+   display: block;
+    margin-top: 15px; /* Δημιουργεί μόνο κενό από την τιμή */
+    margin-left: 0;   /* Εξασφαλίζει ότι το κουμπί θα πάει τέρμα αριστερά */
+
+    /* Προαιρετικά: Στυλ για να ταιριάζει με τα υπόλοιπα χρώματα */
+    background-color: #3b2818; 
+    color: #f7f3ee;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #5a3d24; /* Αλλάζει ελαφρώς χρώμα όταν περνάει το ποντίκι */
+}
+
+
+
+
+
+
+/* --- ΣΤΥΛ ΓΙΑ ΤΟ ΥΠΟΜΕΝΟΥ (HOT / COLD COFFEE) --- */
+
+.submenu-container {
+    width: 60%;
+    margin: 20px auto;
+    background-color: #80634c; /* Ίδιο χρώμα με τις κάρτες των καφέδων */
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#nav2 {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav2 a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #f7f3ee;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#nav2 a:hover {
+    transform: scale(1.05); /* Μεγαλώνει ελαφρώς όταν περνάς το ποντίκι */
+    color: #d1bfae;         /* Αλλάζει ελαφρώς χρώμα το κείμενο */
+}
+
+.category-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    mix-blend-mode: multiply; /* Βοηθάει αν η εικόνα έχει λευκό φόντο */
+}
+
+
+
+
+.remove-btn {
+    background-color: #80634c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.remove-btn:hover {
+    background-color: #3b2818;
+}
+
+/* --- ΣΤΥΛ ΓΙΑ ΤΟ ΜΗΝΥΜΑ ΕΠΙΒΕΒΑΙΩΣΗΣ (TOAST) --- */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #4CAF50; /* Πράσινο χρώμα για επιτυχία */
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    
+    /* Σταθερή θέση κάτω δεξιά */
+    position: fixed;
+    z-index: 1000;
+    bottom: 20px;
+    right: 20px;
+    
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    
+    /* Για το εφέ εμφάνισης/εξαφάνισης */
+    opacity: 0;
+    transition: opacity 0.4s, bottom 0.4s;
+}
+
+/* Η κλάση που θα προσθέτει η Javascript για να το εμφανίσει */
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 40px; /* Ανασηκώνεται ελαφρώς προς τα πάνω */
+}

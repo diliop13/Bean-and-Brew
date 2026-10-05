@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+<body>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bean and Brew</title>
+        <link rel="stylesheet" href="Bean and Brew.css">
+    </head>
+    <!--MENU-->
+    <nav id="nav1">
+        <li><a href="Bean and Brew.html">HOME</a></li>
+        <li><a href="coffees.html">COFFEES</a></li>
+        <li><a href="ourbeans.html">OUR BEANS</a></li>
+        <li><a href="info.html">ABOUT US</a></li>
+        
+        <li>
+            <a href="cart.html" class="cart-link">
+                <img src="images/cart.jpg" alt="Cart" class="cart-icon">
+            </a>
+        </li>
+    
+    </nav>
+    
+    <header class="hero-section">
+        <div class="hero-text">
+            <h1>Artisan Coffee, Crafted Daily</h1>
+            <p>Experience the perfect blend of tradition and taste.</p>
+            <button onclick="window.location.href='coffees.html'" class="btn">View Menu</button>
+        </div>
+    </header>
+    
+    <section class="content-section">
+        <h2>Our Most Popular Coffees</h2>
+        <div class="products-container">
+            <!--PROION ENA-->
+            <div>
+                <img src="images/freddo-espresso.jpg" alt="Freddo Espresso" class="product-image" id="freddo">
+                <h3>Freddo Espresso</h3>
+                <p>Cold, refreshing coffee</p>
+                <span class="price">$3.50</span>
+                <button class="add-to-cart" data-product="Freddo Espresso" data-price="3.50">Quick Add to Cart</button>
+            </div>
+            <!--PROION DYO-->
+            <div>
+                <img src="images/iced-latte.webp" alt="Iced Latte" class="product-image" id="iced-latte">
+                <h3>Iced Latte</h3>
+                <p>Cold,milky coffee</p>
+                <span class="price">$3.50</span>
+                <button class="add-to-cart" data-product="Iced Latte" data-price="3.50">Quick Add to Cart</button>
+            </div>
+            <!--PROION TRIA-->
+            <div>
+                <img src="images/cappucino.webp" alt="Cappuccino" class="product-image" id="cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Hot,cozy,creamy coffee</p>
+                <span class="price">$3.50</span>
+                <button class="add-to-cart" data-product="Cappuccino" data-price="3.50">Quick Add to Cart</button>
+            </div>
+    </section>
+    <!--KATW SEIRA-->
+    <section class="content-section">
+        <h2>Our Most Popular Coffee Beans</h2>
+        <div class="products-container">
+            <!--PROION TESSERA-->
+            <div>
+                <img src="images/beans/oro.webp" alt="Oro Coffee Beans" class="product-image" id="oro">
+                <h3>Oro™ Special Bar Coffee Beans</h3>
+                <span class="price">$80.90</span>
+                <button class="add-to-cart" data-product="Oro™ Special Bar Coffee Beans" data-price="80.90">Quick Add to Cart</button>
+            </div>
+            <!--PROION PENTE-->
+            <div>
+                <img src="images/beans/rex.webp" alt="Rex Coffee Beans" class="product-image" id="rex">
+                <h3>Brazil Rex® Special Bar Coffee Beans</h3>
+                <span class="price">$53.50</span>
+                <button class="add-to-cart" data-product="Brazil Rex® Special Bar Coffee Beans" data-price="53.50">Quick Add to Cart</button>
+            </div>
+            <!--PROION EXI-->
+            <div>
+                <img src="images/beans/organic.webp" alt="Organic Coffee Beans" class="product-image" id="organic">
+                <h3>Organic Espresso Blend Coffee Beans</h3>
+                <span class="price">$18.79</span>
+                <button class="add-to-cart" data-product="Organic Espresso Blend Coffee Beans" data-price="18.79">Quick Add to Cart</button>
+            </div>
+            <!-- Μήνυμα επιβεβαίωσης αγοράς (Toast) -->
+            <div id="cart-toast" class="toast">Το προϊόν προστέθηκε στο καλάθι!</div>
+    
+            <script src="JavaScript/script.js"></script>   
+        </body>
+        
