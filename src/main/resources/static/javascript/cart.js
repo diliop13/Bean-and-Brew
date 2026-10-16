@@ -65,14 +65,11 @@ if (totalPriceElement) {
 }
 
 const clearCartBtn = document.getElementById('clear-cart-btn');
-if (clearCartBtn) {
-    clearCartBtn.addEventListener('click', () => {
-        localStorage.removeItem('cart');
-        location.reload();
-    });
-}
+clearCartBtn.addEventListener('click', () => {
+    localStorage.removeItem('cart');
+    location.reload();
+});
 
-// --- ΚΩΔΙΚΑΣ ΑΓΟΡΑΣ ΠΟΥ ΣΤΕΛΝΕΙ ΣΤΗ ΒΑΣΗ ΔΕΔΟΜΕΝΩΝ (SPRING BOOT) ---
 const checkoutBtn = document.getElementById('checkout-btn');
 if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
@@ -82,13 +79,13 @@ if (checkoutBtn) {
         }
         
         let order = "";
-        cart.forEach(product => { 
-            order += `Product: ${product.name},Quantity: ${product.quantity} | `; 
+        cart.forEach(product => { // Διόρθωση: cart αντί για products
+            order += `Product: ${product.name},Quantity: ${product.quantity} | `; // Διόρθωση: μπήκε το | για να ξεχωρίζουν
         });
 
         const orderPayload = {
             item: order,
-            total: parseFloat(total.toFixed(2)) 
+            total: parseFloat(total.toFixed(2)) // Διόρθωση: μετατροπή σε καθαρό αριθμό για την Java
         };
 
         fetch('http://localhost:8081/api/orders', {
@@ -101,7 +98,7 @@ if (checkoutBtn) {
         .then(response => response.json())
         .then(data => {
             console.log('Order placed successfully:', data);
-            alert('Η παραγγελία σας καταχωρήθηκε επιτυχώς!'); 
+            alert('Η παραγγελία σας καταχωρήθηκε επιτυχώς!'); // Προσθέσαμε και ένα alert για τον πελάτη!
             localStorage.removeItem('cart');
             location.reload();
         })
