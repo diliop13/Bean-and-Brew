@@ -1,0 +1,162 @@
+body {
+  background: rgb(250, 240, 210);
+  color: #775a42;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#home {
+  text-align: center;
+  padding-top: 40px;
+}
+
+#home h1 {
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+#home p {
+  opacity: 0.6;
+}
+
+#login, #signup {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  width: 360px;
+  margin: 40px auto 0;
+  padding: 30px;
+  padding-top: 6px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+  font-family: 'Cormorant Garamond', serif;
+
+}
+
+
+
+#login h4 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+#lock-icon {
+    position: absolute;
+    right: 25px;        
+    top: 45%;
+    transform: translateY(-50%); 
+    font-size: 18px;
+    color: #f5f5f5;
+}
+#lock-icon i {
+    color: #ffffff   !important ;   /* χρώμα του ματιού */
+    font-size: 20px;    /* μέγεθος */
+    cursor: pointer;    /* αλλάζει τον κέρσορα σε pointer */
+    transition: transform 0.2s; /* για smooth animation */
+}
+#user-icon {
+    position: absolute;
+    right: 25px;        
+    top: 30.5%;
+     font-size: 18px;
+    transform: translateY(-50%); 
+    color: #f5f5f5;
+}
+#user-icon i {
+  transition: transform 0.2s ease;
+      font-size: 20px;
+
+}
+
+.pdata {
+  width: 100%;
+  height: 42px;
+  margin-top: 10px;
+  background: #3b2818;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  padding-left: 12px;
+  color: white;
+  transition: 0.2s;
+}
+
+.pdata:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.3);
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: -10px;
+  font-size: 14px;
+}
+#rememberMe {
+  margin-left: -130px;
+  cursor: pointer;
+}
+#forgotPassword:hover {
+  text-decoration: underline;
+  
+}
+.username-err {
+    color: #a64545;
+    font-size: 0.9em;
+    height: 1.2em; /* Κρατάει χώρο για το μήνυμα πάντα */
+    margin-top: 5px;
+    display: block;
+    visibility: hidden; /* Αρχικά κρυφό */
+}
+
+#loginBtn,#signUpBtn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #3b2818;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#loginBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+}
+
+/* Αφαίρεση browser password eye (Chrome, Edge, Safari) */
+input[type="password"]::-webkit-credentials-auto-fill-button,input[type="password"]::-webkit-textfield-decoration-container {
+    display: none !important;
+    visibility: hidden;
+    pointer-events: none;
+}
+/* Αφαίρεση password eye (Microsoft Edge / IE) */
+input[type="password"]::-ms-reveal, input[type="password"]::-ms-clear {
+    display: none;
+}
+.signup {
+  margin-top: 15px;
+  font-size: 14px;
+  & a{
+  color: #493522;
+  }
+}
+.terms {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #888;
+  & a {
+    text-decoration: none;
+  }
+}
+#forgotPassword{
+  color: #493522;
+}
+
+
+
