@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Finance Tracker</title>
+    <link rel="stylesheet" href="/css/style.css">
+    </head>
+<body>
+    
+    <!-- ΤΟ ΚΕΝΤΡΙΚΟ WRAPPER ΠΟΥ ΚΕΝΤΡΑΡΕΙ ΤΑ ΠΑΝΤΑ -->
+    <div id="home">
+        
+        <!-- ΕΞΩΤΕΡΙΚΟΙ ΤΙΤΛΟΙ -->
+        <h1>Create Your Account</h1>
+        <p>Join Finance Tracker to manage your finances effectively.</p>
+
+        <!-- ΤΟ ΚΕΝΤΡΙΚΟ ΠΛΑΙΣΙΟ (Κουτί) -->
+        <div id="signup">
+            <div class="signup-box" id="signup-box">
+                <div>
+                    <h4>Sign Up</h4> 
+                    <input id="new-username" class="pdata" placeholder="Username" required> 
+                    <span id="new-user-icon">
+                        <i class="bx bx-user"></i>
+                    </span> 
+                </div>
+                <div>
+                    <input type="password" class="pdata" id="new-password" placeholder="Password" required> 
+                    <span id="new-lock-icon">
+                        <i class="bx bx-lock" ></i>
+                    </span>     
+                </div>
+                <div>
+                    <input type="password" id="confirm-password" class="pdata" placeholder="Confirm Password" required> 
+                    <span id="confirm-lock-icon">
+                        <i class="bx bx-lock" ></i> 
+                    </span>    
+                </div>
+                <div class="terms">
+                     I agree to the <a href="#">Terms and Conditions</a> <input type="checkbox" id="agreeTerms" required>
+                </div>  
+            </div>  
+            
+            <span id="username-err2" class="username-err"></span>
+            <span id="password-err" class="signup-err"></span>
+            <span id="confirm-password-err" class="signup-err"></span>
+            
+            <div class="signup-box">
+                <input type="button" name="signUp" id="signUpBtn" value="Sign Up">
+                
+                <div class="signup">
+                    Already have an account? <a href="/OnlineFinanceTracker.html">Login</a>     
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="/js/signupjs.js"></script>
+</body>
+    <script src="/js/signupjs.js"></script>
+</html>

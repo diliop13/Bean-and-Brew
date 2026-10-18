@@ -7,12 +7,30 @@ nav{
     align-items: center;
     gap: 40px;
     padding: 20px;
-    background-color: #3b2818;
+    background-color: #3b2818; /* Σκούρο καφέ χρώμα */
+    margin: 0 auto;
     list-style: none;
     width: 60%; /* Πρέπει να είναι ίδιο με το width του nav για να στοιχίζονται */
     margin: 0 auto;
+    position: relative; /* Για να μπορέσουμε να τοποθετήσουμε το εικονίδιο του καλαθιού */
+}
+
+/* Στυλ για το ενεργό link στο μενού πλοήγησης */
+#nav1 a.active {
+    color: #c8ab83; /* Το χρώμα του Bean & Brew */
+    font-weight: bold;
+    border-bottom: 2px solid #c8ab83; /* Υπογράμμιση */
+    padding-bottom: 5px; /* Απόσταση της γραμμής από το κείμενο */
 
 }
+
+#nav1 .cart-link.active {
+    border-bottom: 2px solid #c8ab83; /* Υπογράμμιση */
+}
+
+
+
+
 .hero-section {
     width: 60%; /* Πρέπει να είναι ίδιο με το width του nav για να στοιχίζονται */
     margin: 0 auto;
@@ -20,7 +38,7 @@ nav{
     height: 40vh; /* Πιάνει το 70% του ύψους της οθόνης */
     
     /* Εδώ βάζουμε τη φωτογραφία ΚΑΙ ένα μαύρο ημιδιάφανο φίλτρο από πάνω της */
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/menu-back2.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/menu-back2.jpg');
     background-size: cover; /* Κάνει τη φωτογραφία να χωράει μέσα στο div χωρίς να κόβεται */
     background-position: center;
     background-repeat: no-repeat;
@@ -48,6 +66,7 @@ nav{
 }
 .cart-link{
     margin-left: auto; /* Σπρώχνει το εικονίδιο του καλαθιού δεξιά */
+
 }
 .cart-icon {
     width: 28px; /* Μικρότερο μέγεθος για το εικονίδιο του καλαθιού */
@@ -118,6 +137,37 @@ h2{
     background-color: #80634c; /* Ανοίγει το χρώμα στο καφέ της κάρτας */
     transform: scale(1.05);    /* Μεγαλώνει ελάχιστα */
 }
+
+
+
+
+/* 1. Σπρώχνει ολόκληρο το κουμπί του χρήστη τέρμα δεξιά */
+.user-item {
+    position: absolute;
+    right: 20px; /* Τοποθετεί το εικονίδιο εκεί που τελειώνει το καφέ (80%) */
+    top: 50%;
+    transform: translateY(-50%); /* Το κεντράρει απόλυτα στον κάθετο άξονα */
+    margin-top: 3px; /* Αφαιρεί οποιοδήποτε περιττό κενό από πάνω */
+}
+
+/* 2. Ρυθμίσεις για τη συγκεκριμένη εικόνα (class="user-image") */
+.user-image {
+    width: 45px; /* Προσαρμόζεις το νούμερο για να ταιριάζει με το ύψος του μενού σου */
+    height: auto;
+    cursor: pointer;
+    border-radius: 50%; /* Κάνει τις γωνίες στρογγυλές σε περίπτωση που η εικόνα έχει λευκό τετράγωνο φόντο */
+    transition: transform 0.3s ease; /* Προετοιμασία για το εφέ hover */
+}
+
+/* 3. Μικρό εφέ μεγέθυνσης όταν περνάει το ποντίκι από πάνω (προαιρετικό) */
+.user-image:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
 .add-to-cart {
    display: block;
     margin-top: 15px; /* Δημιουργεί μόνο κενό από την τιμή */
@@ -136,10 +186,6 @@ h2{
 .add-to-cart:hover {
     background-color: #5a3d24; /* Αλλάζει ελαφρώς χρώμα όταν περνάει το ποντίκι */
 }
-
-
-
-
 
 
 /* --- ΣΤΥΛ ΓΙΑ ΤΟ ΥΠΟΜΕΝΟΥ (HOT / COLD COFFEE) --- */
@@ -237,3 +283,5 @@ h2{
     opacity: 1;
     bottom: 40px; /* Ανασηκώνεται ελαφρώς προς τα πάνω */
 }
+
+

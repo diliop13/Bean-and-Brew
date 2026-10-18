@@ -11,21 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- Σύνδεση με το CSS -->
-    <link rel="stylesheet" href="Bean and Brew.css">
+    <link rel="stylesheet" href="../css/Bean and Brew.css">
 </head>
 <body>
     
     <!-- Κεντρικό Μενού -->
-    <nav id="nav1">
-        <li><a href="/index.html">HOME</a></li>
-        <li><a href="coffees.html">COFFEES</a></li>
-        <li><a href="ourbeans.html">OUR BEANS</a></li>
-        <li><a href="info.html">ABOUT US</a></li>
+  <nav id="nav1">
+        <li><a href="/pages/index.html">HOME</a></li>
+        <li><a href="/pages/coffees.html">COFFEES</a></li>
+        <li><a href="/pages/ourbeans.html">OUR BEANS</a></li>
+        <li><a href="/pages/info.html">ABOUT US</a></li>
+        
         <li>
-            <a href="cart.html" class="cart-link">
-                <img src="images/cart.jpg" alt="Cart" class="cart-icon">
+            <a href="/pages/cart.html" class="cart-link active">
+                <img src="/images/cart.jpg" alt="Cart" class="cart-icon">
             </a>
         </li>
+
+        <li class="user-item">
+            <a href="/pages/user/login.html" class="login-link">
+                <img src="/images/user/user-icon.jpg" class="user-image" alt="Login">
+            </a>
+        </li>
+    
     </nav>
 
     <!-- Ενότητα: Καλάθι -->
@@ -61,7 +69,7 @@
         <div class="products-container">
             <!--PROION ENA-->
             <div>
-                <img src="images/freddo-espresso.jpg" alt="Freddo Espresso" class="product-image" id="freddo">
+                <img src="/images/freddo-espresso.jpg" alt="Freddo Espresso" class="product-image" id="freddo">
                 <h3>Freddo Espresso</h3>
                 <p>Cold, refreshing coffee</p>
                 <span class="price">$3.50</span>
@@ -69,7 +77,7 @@
             </div>
             <!--PROION DYO-->
             <div>
-                <img src="images/iced-latte.webp" alt="Iced Latte" class="product-image" id="iced-latte">
+                <img src="/images/iced-latte.webp" alt="Iced Latte" class="product-image" id="iced-latte">
                 <h3>Iced Latte</h3>
                 <p>Cold,milky coffee</p>
                 <span class="price">$3.50</span>
@@ -77,7 +85,7 @@
             </div>
             <!--PROION TRIA-->
             <div>
-                <img src="images/cappucino.webp" alt="Cappuccino" class="product-image" id="cappuccino">
+                <img src="/images/cappucino.webp" alt="Cappuccino" class="product-image" id="cappuccino">
                 <h3>Cappuccino</h3>
                 <p>Hot,cozy,creamy coffee</p>
                 <span class="price">$3.50</span>
@@ -86,7 +94,7 @@
         </div>
     </section>
     <!-- Σύνδεση με το αρχείο JS (Το βάζουμε πάντα στο τέλος του body) -->
-        <script src="JavaScript/script.js"></script>
-        <script src="JavaScript/cart.js"></script>
+        <script src="/javascript/script.js"></script>
+        <script src="/javascript/cart.js"></script>
 </body>
 </html>

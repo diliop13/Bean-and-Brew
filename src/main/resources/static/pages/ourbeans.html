@@ -11,22 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- Σύνδεση με το CSS -->
-    <link rel="stylesheet" href="Bean and Brew.css">
+    <link rel="stylesheet" href="../css/Bean and Brew.css">
 </head>
 <body>
     
     <!-- Κεντρικό Μενού (nav1) -->
-    <nav id="nav1">
-        <li><a href="/index.html">HOME</a></li>
-        <li><a href="coffees.html">COFFEES</a></li>
-        <li><a href="ourbeans.html">OUR BEANS</a></li>
-        <li><a href="info.html">ABOUT US</a></li>
-
+     <nav id="nav1">
+        <li><a href="/pages/index.html">HOME</a></li>
+        <li><a href="/pages/coffees.html">COFFEES</a></li>
+        <li><a href="/pages/ourbeans.html" class="active">OUR BEANS</a></li>
+        <li><a href="/pages/info.html">ABOUT US</a></li>
+        
         <li>
-            <a href="cart.html" class="cart-link">
-                <img src="images/cart.jpg" alt="Cart" class="cart-icon">
+            <a href="/pages/cart.html" class="cart-link">
+                <img src="/images/cart.jpg" alt="Cart" class="cart-icon">
             </a>
         </li>
+
+        <li class="user-item">
+            <a href="/pages/user/login.html" class="login-link">
+                <img src="/images/user/user-icon.jpg" class="user-image" alt="Login">
+            </a>
+        </li>
+    
     </nav>
 
     <!-- Ενότητα: Κόκκοι Καφέ (Our Beans) -->
@@ -38,7 +45,7 @@
             
             <!-- ΠΡΟΪΟΝ 1 -->
             <div>
-                <img src="images/beans/oro.webp" alt="Oro Coffee Beans" class="product-image" id="oro">
+                <img src="/images/beans/oro.webp" alt="Oro Coffee Beans" class="product-image" id="oro">
                 <h3>Oro™ Special Bar Coffee Beans</h3>
                 <span class="price">$80.90</span>
                 <button class="add-to-cart" data-product="Oro™ Special Bar Coffee Beans" data-price="80.90">Quick Add to Cart</button>
@@ -46,7 +53,7 @@
             
             <!-- ΠΡΟΪΟΝ 2 -->
             <div>
-                <img src="images/beans/rex.webp" alt="Rex Coffee Beans" class="product-image" id="rex">
+                <img src="/images/beans/rex.webp" alt="Rex Coffee Beans" class="product-image" id="rex">
                 <h3>Brazil Rex® Special Bar Coffee Beans</h3>
                 <span class="price">$53.50</span>
                 <button class="add-to-cart" data-product="Brazil Rex® Special Bar Coffee Beans" data-price="53.50">Quick Add to Cart</button>
@@ -54,7 +61,7 @@
             
             <!-- ΠΡΟΪΟΝ 3 -->
             <div>
-                <img src="images/beans/organic.webp" alt="Organic Coffee Beans" class="product-image" id="organic">
+                <img src="/images/beans/organic.webp" alt="Organic Coffee Beans" class="product-image" id="organic">
                 <h3>Organic Espresso Blend Coffee Beans</h3>
                 <span class="price">$18.79</span>
                 <button class="add-to-cart" data-product="Organic Espresso Blend Coffee Beans" data-price="18.79">Quick Add to Cart</button>
@@ -62,8 +69,8 @@
 
         </div>
     </section>
-            <script src="JavaScript/script.js"></script>  
-            <script src="JavaScript/cart.js"></script>
+            <script src="/javascript/script.js"></script>  
+            <script src="/javascript/cart.js"></script>
              <!-- Μήνυμα επιβεβαίωσης αγοράς (Toast) -->
             <div id="cart-toast" class="toast">Το προϊόν προστέθηκε στο καλάθι!</div> 
 </body>

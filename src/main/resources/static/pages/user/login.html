@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script th:src="@{/js/script.js}" defer></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
+</head>
+<body>
+    <div id="home">
+
+        <h1>Welcome to Finance Tracker</h1>
+        <p>Manage your finances with ease.</p>
+    </div>
+    <div id="login" class="">
+        
+        <div class="login-box">
+            <div>
+                <h4>Login</h4> 
+                <input id="username" placeholder="Username" class="pdata" required> 
+                <span id="user-icon">
+                     <i class="bx bx-user"></i>
+                </span>            
+            </div>
+            <div>
+                <input type="password" id="password" class="pdata" placeholder="Password" required> 
+                <span id="lock-icon">
+                    <i class="bx bx-lock" ></i>
+                </span>
+            </div>
+            <div class="options">        
+                Remember Me <input type="checkbox" id="rememberMe">
+                <a href="#" id="forgotPassword">Forgot Password?</a>
+            </div>  
+            <span id="username-err" class="username-err"></span>
+            </div>  
+            
+            <span id="passwordErr" class="username-err"></span>
+            
+        <div class="login-box">
+                <input type="button" name="Login" id="loginBtn" value="Login">
+                
+                <div class="signup">
+                    Don't have an account? <a href="/signup">Sign Up</a>     
+                </div>
+
+            </div>
+    </div>
+
+</body>
+
+</html>

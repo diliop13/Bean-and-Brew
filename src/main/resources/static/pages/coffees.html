@@ -11,21 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- Σύνδεση με το CSS -->
-    <link rel="stylesheet" href="Bean and Brew.css">
+    <link rel="stylesheet" href="../css/Bean and Brew.css">
 </head>
 <body>
     
     <!-- Κεντρικό Μενού (nav1) -->
-    <nav id="nav1">
-        <li><a href="/index.html">HOME</a></li>
-        <li><a href="coffees.html">COFFEES</a></li>
-        <li><a href="ourbeans.html">OUR BEANS</a></li>
-        <li><a href="info.html">ABOUT US</a></li>
+     <nav id="nav1">
+        <li><a href="/pages/index.html">HOME</a></li>
+        <li><a href="/pages/coffees.html" class="active">COFFEES</a></li>
+        <li><a href="/pages/ourbeans.html">OUR BEANS</a></li>
+        <li><a href="/pages/info.html">ABOUT US</a></li>
+        
         <li>
-            <a href="cart.html" class="cart-link">
-                <img src="images/cart.jpg" alt="Cart" class="cart-icon">
+            <a href="/pages/cart.html" class="cart-link">
+                <img src="/images/cart.jpg" alt="Cart" class="cart-icon">
             </a>
         </li>
+
+        <li class="user-item">
+            <a href="/pages/user/login.html" class="login-link">
+                <img src="/images/user/user-icon.jpg" class="user-image" alt="Login">
+            </a>
+        </li>
+    
     </nav>
 
     <!-- Υπομενού Κατηγοριών (nav2) -->
@@ -33,13 +41,13 @@
         <ul id="nav2">
             <li>
                 <a href="#hot-coffees">
-                    <img src="images/hot coffee.webp" alt="Hot Coffee" class="category-icon">    
+                    <img src="/images/hot coffee.webp" alt="Hot Coffee" class="category-icon">    
                     <span>Hot Coffee</span>
                 </a>
             </li>
             <li>
                 <a href="#cold-coffees">
-                    <img src="images/cold-coffee.jpg" alt="Cold Coffee" class="category-icon">    
+                    <img src="/images/cold-coffee.jpg" alt="Cold Coffee" class="category-icon">    
                     <span>Cold Coffee</span>
                 </a>
             </li>
@@ -52,21 +60,21 @@
         <div class="products-container">
             
             <div class="product-card">
-                <img src="images/cappucino.webp" alt="Cappuccino" class="product-image">
+                <img src="/images/cappucino.webp" alt="Cappuccino" class="product-image">
                 <h3>Cappuccino</h3>
                 <p>Hot, cozy, creamy coffee</p>
                 <span class="price">$3.50</span>
                 <br>
-                <button class="add-to-cart">Quick Add to Cart</button>
+                <button class="add-to-cart" data-product="Cappuccino" data-price="3.50">Quick Add to Cart</button>
             </div>
 
             <div class="product-card">
-                <img src="images/espresso.webp" alt="Espresso" class="product-image">
+                <img src="/images/espresso.webp" alt="Espresso" class="product-image">
                 <h3>Espresso</h3>
                 <p>Rich and intense shot</p>
                 <span class="price">$2.50</span>
                 <br>
-                <button class="add-to-cart">Quick Add to Cart</button>
+                <button class="add-to-cart" data-product="Espresso" data-price="2.50">Quick Add to Cart</button>
             </div>
 
         </div>
@@ -78,27 +86,27 @@
         <div class="products-container">
             
             <div class="product-card">
-                <img src="images/freddo-espresso.jpg" alt="Freddo Espresso" class="product-image">
+                <img src="/images/freddo-espresso.jpg" alt="Freddo Espresso" class="product-image">
                 <h3>Freddo Espresso</h3>
                 <p>Cold, refreshing coffee</p>
                 <span class="price">$3.50</span>
                 <br>
-                <button class="add-to-cart">Quick Add to Cart</button>
+                <button class="add-to-cart" data-product="Freddo Espresso" data-price="3.50">Quick Add to Cart</button>
             </div>
 
             <div class="product-card">
-                <img src="images/iced-latte.webp" alt="Iced Latte" class="product-image">
+                <img src="/images/iced-latte.webp" alt="Iced Latte" class="product-image">
                 <h3>Iced Latte</h3>
                 <p>Cold, milky coffee</p>
                 <span class="price">$3.50</span>
                 <br>
-                <button class="add-to-cart">Quick Add to Cart</button>
+                <button class="add-to-cart" data-product="Iced Latte" data-price="3.50">Quick Add to Cart</button>
             </div>
 
         </div>
     </section>
-            <script src="JavaScript/script.js"></script>   
-            <script src="JavaScript/cart.js"></script>
+            <script src="/JavaScript/script.js"></script>   
+            <script src="/JavaScript/cart.js"></script>
             <!-- Μήνυμα επιβεβαίωσης αγοράς (Toast) -->
             <div id="cart-toast" class="toast">Το προϊόν προστέθηκε στο καλάθι!</div>
 </body>
