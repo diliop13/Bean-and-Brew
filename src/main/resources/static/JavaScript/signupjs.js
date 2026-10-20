@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const result = await response.text();
-            alert("Απόκριση Backend: " + result);
+            alert("Απόκριση Backend: " + result);   
         } catch (error) {
             console.error("Σφάλμα:", error);
             alert("Αποτυχία σύνδεσης με το Backend");

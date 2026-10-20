@@ -16,7 +16,7 @@
 
 // Εμφάνιση error όταν φύγει από το input και είναι κενό
 usernameInput.addEventListener('blur', () => {
-    if (usernameInput.value.trim() !== "sakis") {
+    if (usernameInput.value.trim() == "") {
         userIcon.innerHTML = "<i class='bx bx-x'></i>";
         usernameErr.textContent = "Please enter a valid username.";
         usernameErr.style.visibility = "visible";
@@ -67,17 +67,56 @@ lock.addEventListener('click', () => {
     }
 });
 
- button.addEventListener('click', () => {
+ button.addEventListener('click', async(e) => {
     const username = usernameInput.value.trim();
     const password = passwordInput.value;
 
-    // Απλός έλεγχος για παράδειγμα
-    // Μπορείτε να αντικαταστήσετε αυτό με πραγματική λογική ελέγχου
-    if (username === "sakis" && password === "12345") {
-        alert("Login successful!");
-        // Προχωρήστε στην επόμενη σελίδα ή λειτουργία
-    } else {
-        alert("Invalid username or password.");
+    const userData ={
+        username: username,
+        password: password
+    };
+    
+    try{
+        const response = await fetch('/api/login',{
+            method: 'POST',
+            headers: {'Content-type' : 'application/json'},
+            body: JSON.stringify(userData)
+        });
+
+        const result= await response.text();
+
+        //ΑΜΑ ΠΡΑΓΜΑΤΟΠΟΙΗΘΕΙ ΤΟ LOGIN KANEI:
+        if(response.ok){
+            localStorage.setItem("loggedUser",username);
+            window.location.href="../index.html";
+        }
+        //ΑΝ ΔΕΝ ΓΙΝΕΙ ΓΙΑ ΚΑΠΟΙΟ ΛΟΓΟ ΕΜΦΑΝΙΖΕΙ
+        else{
+            // Βρίσκουμε και τα δύο στοιχεία HTML για τα λάθη
+            const userErrorSpan = document.getElementById('username-err'); 
+            const passErrorSpan = document.getElementById('passwordErr'); 
+            
+            // Κρύβουμε τα προηγούμενα μηνύματα (αν υπήρχαν)
+            userErrorSpan.style.visibility = "hidden";
+            passErrorSpan.style.visibility = "hidden";
+
+            // Ελέγχουμε την ακριβή απάντηση του backend
+            if (result === "User not found!") {
+                userErrorSpan.textContent = result;
+                userErrorSpan.style.visibility = "visible";
+            } else if (result === "Invalid password!") {
+                passErrorSpan.textContent = result;
+                passErrorSpan.style.visibility = "visible";
+            } else {
+                // Αν έρθει κάποιο άλλο απρόσμενο σφάλμα
+                alert("ERROR: " + result);
+            }
+        }
+    
+    }catch(error){
+        alert("The error is: "+error.message);
+        console.error(error);
     }
-    }); 
+
+}); 
 

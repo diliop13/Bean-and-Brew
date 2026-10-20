@@ -285,3 +285,57 @@ h2{
 }
 
 
+/* ----------------------------------------------------------------*/
+
+
+/*KRYFO DROP DOWN MENU GIA SYNDEDEMENOYS XRHSTES*/
+.logged-in-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 200px;
+    padding: 8px;
+    background: #fdf8ef;
+    border: 1px solid #d4c5b0;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(62, 39, 35, 0.15);
+    z-index: 1000;
+}
+
+/* Όνομα χρήστη ή διαχωριστικό */
+.logged-in-menu span {
+    display: block;
+    height: 1px;
+    background: #e6d7c3;
+    margin: 6px 4px;
+}
+
+/* Links */
+.logged-in-menu a,.logged-in-menu p {
+    display: block;
+    padding: 12px 14px;
+    color: #4a3628 !important;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease;
+    margin: 0;
+}
+
+/* Hover effect */
+.logged-in-menu a:hover {
+    background: #ebdcc9;
+    color: #4a3628 !important;
+}
+
+/* Log Out */
+.logged-in-menu a:last-child {
+    color: #c94c4c;
+    font-weight: bold;
+}
+/* Log Out */
+.logged-in-menu a:last-child:hover {
+    background: #fde8e8;
+    color: #c94c4c !important;
+}
